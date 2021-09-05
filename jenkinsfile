@@ -1,0 +1,24 @@
+node {
+      stage('Preparation') { // for display purposes
+        // Get some code from a GitHub repository
+        git 'https://github.com/aslesh12/ksproject.git'
+        // Get the Maven tool.
+        // ** NOTE: This 'M3' Maven tool must be configured
+        // **       in the global configuration.
+       
+    }
+    stage('mvn clean') {
+        //Run mvn clean
+    }
+    stage('mvn validate') {
+	//Run mvn validate
+      sh 'mvn validate'
+    }
+    stage('mvn compile') {
+      sh 'mvn compile'
+    }
+    stage('mvn package') {
+      sh 'mvn package'
+    }
+}
+
