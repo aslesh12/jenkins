@@ -20,5 +20,8 @@ node {
     stage('mvn package') {
       sh 'mvn package'
     }
+    stage('mvn deploy') {
+      sh 'mvn deploy'
+    }
 }
 
